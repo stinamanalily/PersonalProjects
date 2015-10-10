@@ -161,8 +161,26 @@ nav#menu button:hover {
 			margin-top:20%;
 			top:0;
 			left:40px;
-	}
-		
+			font-family: 'Raleway', sans-serif;
+
+}
+	
+.fixed-side-navigation  li {
+	 border-bottom: 2px solid #85E6C5;
+}
+
+.fixed-side-navigation  li:hover {
+	 border-bottom: 2px solid #0FA0CE;
+}
+
+.fixed-side-navigation  li a{
+	text-decoration:none;
+}
+
+ul.side-nav-links {
+	list-style-type: none;
+}
+
 /* Typography
 ––––––––––––––––––––––––––––––––––––––––
 h1, h2, h3, h4, h5, h6 {
