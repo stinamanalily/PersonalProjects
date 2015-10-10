@@ -131,6 +131,7 @@ nav#menu {
     margin-bottom: 11px;
 }
 
+/* tabs button menu style */
 nav#menu {
 	padding:20;
 }
@@ -151,7 +152,17 @@ nav#menu button:hover {
 	  border-color: rgba(255, 255, 255, 0.3); 
 }
 
+/* translucent sidebar menu */
 
+.fixed-side-navigation {
+			display:block;
+			z-index:10;
+			position:absolute;
+			margin-top:20%;
+			top:0;
+			left:40px;
+	}
+		
 /* Typography
 ––––––––––––––––––––––––––––––––––––––––
 h1, h2, h3, h4, h5, h6 {
@@ -183,6 +194,9 @@ p {
 –––––––––––––––––––––––––––––––––––––––––––––––––– 
 a {
   color: #1EAEDB; }*/
+a { 
+  color: #85E6C5; 
+  text-decoration: none; }  
 a:hover {
   color: #0FA0CE; }
 

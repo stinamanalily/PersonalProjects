@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+	<head>
+		<title>Page 2</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/slider.css">
+	</head>
+	<style>
+		.gh-block {
+			height:100vh;
+		}
+		.fixed-side-navigation {
+			display:block;
+			z-index:10;
+			position:absolute;
+			margin-top:200px;
+			top:0;
+			left:40px;
+		}
+	</style>
+	
+	<body >
+		<div class="fixed-side-navigation">
+			<ul class="center nav" style="display:inline;">
+				<li title="about" class="opts"><a href="#">About</a></li>
+				<li title="portfolio"  class="opts"><a href="#">Portfolio</a></li>
+				<li title="blog"><a href="#">Blog</a></li>
+				<li title="contact"><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<div class="slider">
+			<section class="gh-block active-slide contact slide content" style="background: url('forest-hd-3d-wallpaper-5.jpg')">
+				SLIDE1
+			</section>
+
+			<!-- second slide -->
+			<section class=" gh-block about slide" style="background-color:#00FFFF;">
+				slide 2
+			</section>      
+
+			 <!-- third slide -->
+			  <section class="gh-block portfolio slide" style="background-color:#cccccc;">
+				 slide 3
+			  </section> 
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="slider.js"> </script>
+	</body>
+</html>
