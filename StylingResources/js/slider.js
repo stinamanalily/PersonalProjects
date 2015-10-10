@@ -6,7 +6,7 @@ var main = function() {
 		var currentSlide = $('.active-slide');
 		var thisSlide = $(getSlide);
 		currentSlide.fadeOut(600).removeClass('active-slide');
-		thisSlide.fadeIn(600).addClass('active-slide'); 
+		thisSlide.fadeIn(1000).addClass('active-slide'); 
   });
 }
  
