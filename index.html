@@ -43,6 +43,7 @@
 		top:0;
 		left:10px;
 		padding:10px;
+		min-height:100%;
 	}
 	.hidden-slide {
 		overflow:hidden;
@@ -54,7 +55,7 @@
 	}
 	.contents {
 		padding:50px;
-		color:#707070;
+		color:#f0f0f0;
 	}
 	nav#menu {
     margin-bottom: 11px;
@@ -85,18 +86,23 @@
 	
 	.vert-block {
 		min-height:100%;
+		height:100%;
 	}
 	
 	.fixed-side-navigation {
-		display:block; 
+		display:inline-block;
  		z-index:10;
 		overflow:hidden;
 		margin-top:0;
+		top: 0;
+		bottom: 0;
 		left:0;
 		font-family: 'Raleway', sans-serif;
 		border-right:#707070 2px solid;
 		opacity:0.7;
+		
 		min-width:10%;
+		
 	}
 	.fixed-side-navigation:nth-child(2) {
 		opacity:1.0;
@@ -141,13 +147,6 @@
 		background-color:#000;
 		opacity: 0.7;
 	}
-	.responsive-block {
-		
-	}
-	
-	.slider:nth-child(2) {
-		
-	}
 	
   </style>
 	<body>
@@ -169,25 +168,19 @@
 		</div>
 		<div class="slider">
 			<!-- first slide background-image: linear-gradient(150deg, #0000FF, #33CCFF, #66FFFF);  background: -->
-			<div class="gh-block home active-slide " style="">
-				<div class="container-fluid">
+			<div class="gh-block home active-slide hidden-slide" style="">
+				<div class="container-fluid" >
 					<div class="col-md-10 col-md-offset-1 contents">
 						<div class="col-md-10 col-md-offset-1">
-								<div class="page-heading">
-									<h1 class="project-name">Stinamanalily's Personal Projects</h1>
-									<h2 class="project-tagline">Codes and stuff...</h2> 
+							<div class="page-heading">
+								<h1 class="project-name">Stinamanalily's Personal Projects</h1>
+								<h2 class="project-tagline">Codes and stuff...</h2> 
 									<nav id="menu">
 										<button class="translucent-btn">Javascript</button>
 										<button class="translucent-btn">Salesforce</button>
 										<button class="translucent-btn">C++</button>
 									<nav>
-								</div>
-						</div>	
-					</div>
-				</div>
-				
-					<div class="col-md-10 col-md-offset-1">
-						<div class="col-md-10 col-md-offset-1">
+							</div>
 							<div class="twelve columns" style="text-align:center; color:#fff;">
 								<a href="https://github.com/stinamanalily/PersonalProjects">Personal Projects</a> is maintained by <a href="https://github.com/stinamanalily">stinamanalily</a>.
 
@@ -195,9 +188,9 @@
 							</div>
 						</div>	
 					</div>
-				<footer style="bottom:20px; position: absolute;">
-				</footer>
-					
+				</div>
+				
+			
 			</div>
 			<!-- second slide background: url('StylingResources/img/norway-fjord-fog-between-mountains.jpg') no-repeat fixed center; -->
 			<div class="gh-block about hidden-slide" style="">
