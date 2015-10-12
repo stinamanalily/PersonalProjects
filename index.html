@@ -6,24 +6,43 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> 
     <link rel="stylesheet" type="text/css" href="StylingResources/stylesheets/stylesheet.css"> 
     <link rel="stylesheet" type="text/css" href="StylingResources/stylesheets/github-light.css" > 
-	<link rel="stylesheet" type="text/css" href="StylingResources/stylesheets/skeleton.css" >
+	<!--<link rel="stylesheet" type="text/css" href="StylingResources/stylesheets/skeleton.css" > -->
+	<link rel="stylesheet" type="text/css" href="StylingResources/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="StylingResources/stylesheets/style.css">
 	<link rel="stylesheet" href="StylingResources/font-awesome-4.4.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
   </head>
   <style>
+	body {
+	 /* font-size: 1.5em;  currently ems cause chrome bug misinterpreting rems on body element
+	  line-height: 1.6; */
+	  font-weight: 400; 
+	  /*font-family: 'Cuprum', sans-serif;  */
+	  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	  color: #222; 
+
+	  background: url('StylingResources/img/gray_cherry_blossom_trees_spring_white_flowers_hd-wallpaper-1377459.jpg')no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
 	.gh-block {
-			height:100vh;
-		}
+		height:100vh;	
+		
+	}
+	.top-offset-60 {
+		margin-top:60px;
+	}
 	.fixed-side-navigation {
-			display:block;
-			z-index:10;
-			position:absolute;
-			margin-top:15%;
-			top:0;
-			left:40px;
-			padding:10px;
+		display:block;
+		z-index:10;
+		position:absolute;
+		margin-top:15%;
+		top:0;
+		left:10px;
+		padding:10px;
 	}
 	.hidden-slide {
 		overflow:hidden;
@@ -35,63 +54,219 @@
 	}
 	.contents {
 		padding:50px;
-		color:#f0f0f0;
+		color:#707070;
 	}
+	nav#menu {
+    margin-bottom: 11px;
+}
+
+	/* tabs button menu style */
+	nav#menu {
+		padding:20;
+	}
+
+	nav#menu  button {
+		background-color: background-color: rgba(255, 255, 255, 0.08);
+		color: rgba(255, 255, 255, 0.7);
+		background-color: rgba(255, 255, 255, 0.08);
+		border-color: rgba(255, 255, 255, 0.2);
+		border-style: solid;
+		border-width: 1px;
+	}
+
+	nav#menu button:hover {
+		color: rgba(255, 255, 255, 0.8);
+		  text-decoration: none;
+		  background-color: rgba(255, 255, 255, 0.2);
+		  border-color: rgba(255, 255, 255, 0.3); 
+	}
+
+	/* translucent sidebar menu */
+	
+	.vert-block {
+		min-height:100%;
+	}
+	
+	.fixed-side-navigation {
+		display:block; 
+ 		z-index:10;
+		overflow:hidden;
+		margin-top:0;
+		left:0;
+		font-family: 'Raleway', sans-serif;
+		border-right:#707070 2px solid;
+		opacity:0.7;
+		min-width:10%;
+	}
+	.fixed-side-navigation:nth-child(2) {
+		opacity:1.0;
+	}	
+	.fixed-side-navigation  li {
+		 border-bottom: 2px solid #85E6C5;
+	}
+
+	.fixed-side-navigation  li:hover {
+		 border-bottom: 2px solid #0FA0CE;
+	}
+
+	.fixed-side-navigation  li a{
+		text-decoration:none;
+	}
+
+	side-nav-links {
+		margin-top:50%;
+		
+	}
+	ul.side-nav-links {
+		list-style-type: none;
+	}
+	ul.side-nav-links li{
+		list-style-type: none;
+		padding-top:20px;
+	}
+	
+	a { 
+		color: #85E6C5; 
+		text-decoration: none; 
+	}  
+	a:hover {
+		color: #0FA0CE; 
+	}
+	input[type="text"]{
+		opacity: 0.7;
+		border: none;
+		background: #000;
+	}
+	textarea  { 
+		background-color:#000;
+		opacity: 0.7;
+	}
+	.responsive-block {
+		
+	}
+	
+	.slider:nth-child(2) {
+		
+	}
+	
   </style>
-  <body>
-	<div class="fixed-side-navigation">
-		<center><i class="fa fa-code fa-4x" style="padding:10px"></i> </center>
-		<ul class="side-nav-links">
-			<li title="home" class="opts"><a href="#">Home</a></li>
-			<li title="about"  class="opts"><a href="#">About</a></li>
-			<li title="portfolio"  class="opts"><a href="#">Portfolio</a></li>
-		</ul>
-	</div>
+	<body>
+		<div class="fixed-side-navigation vert-block" style="background:#fff;">
+			<div class="col-md-12 inner-nav" style="margin-top:50%;">
+				<a href="#"> <i class="fa fa-code fa-4x pull-right" ></i> </a>
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="side-nav-links">
+							<li title="home"  class="opts" style="text-align:right"><a href="#">Home</a></li>
+							<li title="about"  class="opts" style="text-align:right"><a href="#">About</a></li>
+							<li title="portfolio"  class="opts" style="text-align:right"><a href="#">Portfolio</a></li>
+							<li title="contact"  class="opts" style="text-align:right"><a href="#">Contact Me </a></li>
+							<li title="Codebits"  class="opts" style="text-align:right"><a href="#">Code Bits</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="slider">
-			<div class="gh-block home active-slide" style="background-image: linear-gradient(150deg, #0000FF, #33CCFF, #66FFFF);">
-				<div class="page-heading">
-					<h1 class="project-name">Stinamanalily's Personal Projects</h1>
-					<h2 class="project-tagline">Codes and stuff...</h2> 
+			<!-- first slide background-image: linear-gradient(150deg, #0000FF, #33CCFF, #66FFFF);  background: -->
+			<div class="gh-block home active-slide " style="">
+				<div class="container-fluid">
+					<div class="col-md-10 col-md-offset-1 contents">
+						<div class="col-md-10 col-md-offset-1">
+								<div class="page-heading">
+									<h1 class="project-name">Stinamanalily's Personal Projects</h1>
+									<h2 class="project-tagline">Codes and stuff...</h2> 
+									<nav id="menu">
+										<button class="translucent-btn">Javascript</button>
+										<button class="translucent-btn">Salesforce</button>
+										<button class="translucent-btn">C++</button>
+									<nav>
+								</div>
+						</div>	
+					</div>
 				</div>
 				
-				<div class="container">
-					<nav id="menu">
-						<button class="translucent-btn">Javascript</button>
-						<button class="translucent-btn">Salesforce</button>
-						<button class="translucent-btn">C++</button>
-					<nav>
-				</div>
-			
-				<footer style="bottom:20px; position: absolute;">
-					<div class="twelve columns" style="text-align:center; color:#fff;">
-						<a href="https://github.com/stinamanalily/PersonalProjects">Personal Projects</a> is maintained by <a href="https://github.com/stinamanalily">stinamanalily</a>.
+					<div class="col-md-10 col-md-offset-1">
+						<div class="col-md-10 col-md-offset-1">
+							<div class="twelve columns" style="text-align:center; color:#fff;">
+								<a href="https://github.com/stinamanalily/PersonalProjects">Personal Projects</a> is maintained by <a href="https://github.com/stinamanalily">stinamanalily</a>.
 
-						This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme </a>by <a href="https://twitter.com/jasonlong">Jason Long</a> <i>(with a lot of added changes and a personal touch, if I may add)</i>.
+								This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme </a>by <a href="https://twitter.com/jasonlong">Jason Long</a> <i>(with a lot of added changes and a personal touch, if I may add)</i>.
+							</div>
+						</div>	
 					</div>
-				</footer> 
+				<footer style="bottom:20px; position: absolute;">
+				</footer>
+					
 			</div>
-			
-			<!-- second slide  -->
-			<div class="gh-block about hidden-slide" style="background: url('StylingResources/img/norway-fjord-fog-between-mountains.jpg') no-repeat fixed center;">
-				<div class="eleven columns offset-by-one transparent-gradient gh-block" style="background:linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,.5));">
+			<!-- second slide background: url('StylingResources/img/norway-fjord-fog-between-mountains.jpg') no-repeat fixed center; -->
+			<div class="gh-block about hidden-slide" style="">
+				<div class="col-xs-12 transparent-gradient gh-block" style="background:linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,.5));">
+					<div class="container">
 						<div class="contents">
-							<h1>About:</h1>
-							<h2>some stuff about me...</h2> 
+							<h1>About Me</h1>
+							<h2>some stuff about me</h2> 
 						</div>
 					</div>
 				</div>
-			</div>     
-
-			<!-- third slide -->
-			  <div class="gh-block portfolio hidden-slide" style="background: url('StylingResources/img/iceland-wallpaper-04.jpg') no-repeat fixed center;">
-				<div class="eleven columns offset-by-one transparent-gradient gh-block" style="background:linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,.5));">
-					<div class="contents">
-						<h1>Portfolio</h1>
-						<h2>some stuff to display and show</h2> 
+			</div>
+			<!-- third slide background: url('StylingResources/img/iceland-wallpaper-04.jpg') -->
+			  <div class="gh-block portfolio hidden-slide" style="">
+				<div class="col-xs-12 transparent-gradient gh-block" style="background:linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,.5));">			
+					<div class="container">
+						<div class="contents">
+							<h1>Portfolio</h1>
+							<h2>some stuff to display and show</h2> 
+						</div>
 					</div>
 				</div>
-			</div>  
-		</div> 
+			</div> 
+			<!-- third slide background: url('StylingResources/img/iceland-wallpaper-04.jpg') -->
+			<div class="gh-block Codebits hidden-slide " style="">
+				<div class="transparent-gradient gh-block" style="background:linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,.5));">			
+					<div class="container-fluid">
+						<div class="col-md-10 col-md-offset-1 contents">
+							<div class="col-md-10 col-md-offset-1">
+								<h1>codebits </h1>
+								<h2>some stuff to display and show</h2> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> 
+			
+			<!-- forth slide   background: url('StylingResources/img/norway-fjord-fog-between-mountains.jpg')--> 
+			<div class="gh-block contact hidden-slide" style="">
+				<div class="transparent-gradient gh-block" style="background:linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,.5));">
+					<div class="container-fluid">
+						<div class="col-md-10 col-md-offset-1 contents">
+							<div class="col-md-10 col-md-offset-1">
+								<h1>Contact Me:</h1>
+								<h2>something something something</h2>								
+								<form class="contactme top-offset-60">
+									<div class="col-md-5">
+										<div class="form-group" style="padding:5px;">
+										  <input type="text" class="form-control" placeholder="email" aria-describedby="basic-addon1">
+										</div>
+
+										<div class="form-group" style="padding:5px;">
+										  <input type="text" class="form-control" placeholder="Full Name" aria-describedby="basic-addon2">
+										</div>
+
+										<div class="form-group" style="padding:5px; ">
+										  <textarea class="form-control" style="background-color:#000;"></textarea>
+										</div>
+										<div class="form-group" style="padding:5px;">
+										  <button class="btn" type="submit"> Submit </button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	<script src ="StylingResources/js/slider.js"></script>
   </body>
 </html>

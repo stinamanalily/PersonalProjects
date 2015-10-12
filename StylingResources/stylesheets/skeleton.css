@@ -31,7 +31,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
@@ -51,7 +51,7 @@
 /* For devices larger than 550px */
 @media (min-width: 550px) {
   .container {
-    width: 80%; }
+    width: 90%; }
   .column,
   .columns {
     margin-left: 4%; }
@@ -124,63 +124,11 @@ body {
  /* font-size: 1.5em;  currently ems cause chrome bug misinterpreting rems on body element
   line-height: 1.6; */
   font-weight: 400; 
+  /*font-family: 'Cuprum', sans-serif;  */
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; }
 
-nav#menu {
-    margin-bottom: 11px;
-}
 
-/* tabs button menu style */
-nav#menu {
-	padding:20;
-}
-
-nav#menu  button {
-    background-color: background-color: rgba(255, 255, 255, 0.08);
-	color: rgba(255, 255, 255, 0.7);
-	background-color: rgba(255, 255, 255, 0.08);
-	border-color: rgba(255, 255, 255, 0.2);
-	border-style: solid;
-	border-width: 1px;
-}
-
-nav#menu button:hover {
-    color: rgba(255, 255, 255, 0.8);
-	  text-decoration: none;
-	  background-color: rgba(255, 255, 255, 0.2);
-	  border-color: rgba(255, 255, 255, 0.3); 
-}
-
-/* translucent sidebar menu */
-
-.fixed-side-navigation {
-			display:block;
-			z-index:10;
-			position:absolute;
-			margin-top:15%;
-			top:0;
-			left:40px;
-			font-family: 'Raleway', sans-serif;
-			 color: #85E6C5; 
-
-}
-	
-.fixed-side-navigation  li {
-	 border-bottom: 2px solid #85E6C5;
-}
-
-.fixed-side-navigation  li:hover {
-	 border-bottom: 2px solid #0FA0CE;
-}
-
-.fixed-side-navigation  li a{
-	text-decoration:none;
-}
-
-ul.side-nav-links {
-	list-style-type: none;
-}
 
 /* Typography
 ––––––––––––––––––––––––––––––––––––––––
@@ -472,4 +420,5 @@ there.
 @media (min-width: 1000px) {}
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+}
