@@ -7,7 +7,7 @@ app.config(function($routeProvider){
 		  .when('/portfolio',{
                 templateUrl: 'portfolio.html'
           })
-		  .when( '/', {
+		  .otherwise({
 				redirectTo: 'home.html'
 			});
 });
