@@ -2,14 +2,14 @@ var app=angular.module('single-page-app',['ngRoute']);
 app.config(function($routeProvider){
       $routeProvider
           .when('/home',{
-                templateUrl: 'home.html'
+                templateUrl: '/'
           })
           
 		  .when('/portfolio',{
                 templateUrl: 'portfolio.html'
           });
 		  .otherwise({
-                templateUrl: 'home.html'
+                templateUrl: '/'
           });
 });
 
