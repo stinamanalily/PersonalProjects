@@ -4,7 +4,6 @@ app.config(function($routeProvider){
           .when('/home',{
                 templateUrl: '/'
           })
-          
 		  .when('/portfolio',{
                 templateUrl: 'portfolio.html'
           });
