@@ -6,26 +6,26 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> 
     <link rel="stylesheet" type="text/css" href="StylingResources/stylesheets/stylesheet.css"> 
     <link rel="stylesheet" type="text/css" href="StylingResources/stylesheets/github-light.css" > 
-	<!--<link rel="stylesheet" type="text/css" href="StylingResources/stylesheets/skeleton.css" > -->
 	<link rel="stylesheet" href="StylingResources/stylesheets/style.css">
 	<link rel="stylesheet" href="StylingResources/font-awesome-4.4.0/css/font-awesome.min.css">
-	
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script>
+	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> 
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
   </head>
   <style>
-	body {
+	html, body {
 	 /* font-size: 1.5em;  currently ems cause chrome bug misinterpreting rems on body element
 	  line-height: 1.6; */
 	  font-weight: 400; 
 	  /*font-family: 'Cuprum', sans-serif;  */
 	  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	  color: #222; 
+	  height: 100%;
+	  margin: 0px;
 
 	  background: url('StylingResources/img/gray_white_cherry_blossom_yay_nature_flowers_hd-wallpaper-1131718.jpg')no-repeat center center fixed; 
 	  -webkit-background-size: cover;
@@ -144,8 +144,10 @@
 
 	}
 	.fixed-side-navigation {
-		display:inline-block;
+		display:block;
 		overflow:hidden;
+		margin-top:0;
+		margin-bottom-0;
 		top: 0;
 		bottom: 0;
 		left:0;
@@ -153,8 +155,9 @@
 		border-right:#707070 2px solid;
 		background: url('StylingResources/img/nav-background.png'); 
 		min-width:10%;
-		color:#707070;
-		
+		color:#000000;
+		min-height:100%;
+		position:absolute; 
 	}
 	.fixed-side-navigation:nth-child(2) {
 	}	
@@ -212,7 +215,7 @@
 	}
 	
   </style>
-	<body ng-app="single-page-app">
+	<body ng-app="single-page-app">	
 		<div class="fixed-side-navigation stack-priority vert-block">
 			<div class="col-md-12 inner-nav" style="margin-top:50%;">
 				<a href="#"> <i class="fa fa-code fa-4x pull-right" ></i> </a>
@@ -228,12 +231,10 @@
 					</div>
 				</div>
 			</div>
-			
 		</div>
-		<div class="col-md-9 vert-block" ng-view>
-			
+		<div class="ng-route" ng-view >
 		</div>
-	<script src ="StylingResources/js/slider.js"></script>
-	<script src ="StylingResources/js/routing.js"></script>
+	<script type="text/javascript" src="StylingResources/js/slider.js" ></script>
+	<script type="text/javascript" src="StylingResources/js/routing.js"></script>
   </body>
 </html>
