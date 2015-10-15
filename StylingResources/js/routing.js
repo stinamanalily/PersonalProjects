@@ -8,7 +8,7 @@ app.config(function($routeProvider){
                 templateUrl: 'portfolio.html'
           })
 		  .otherwise({
-				redirectTo: '/'
+				redirectTo: '/home'
 			});
 });
 
