@@ -9,7 +9,7 @@ app.config(function($routeProvider){
                 templateUrl: 'portfolio.html'
           });
 		  .otherwise({
-                templateUrl: '/'
-          });
+				redirectTo: '/'
+			});
 });
 
