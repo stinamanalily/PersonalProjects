@@ -4,6 +4,12 @@ app.config(function($routeProvider){
           .when('/home',{
                 templateUrl: 'home.html'
           })
+		  .when('/about',{
+                templateUrl: 'about.html'
+          })
+		  .when('/contact',{
+                templateUrl: 'contact.html'
+          })
 		  .when('/portfolio',{
                 templateUrl: 'portfolio.html'
           })
