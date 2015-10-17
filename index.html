@@ -209,23 +209,29 @@
 		background-color:#000;
 		opacity: 0.7;
 	}
-	
+	.right {
+  overflow: auto;
+}
   </style>
 	<body ng-app="single-page-app">	
 		<div class="fixed-side-navigation col-lg-1 vert-block">
 			<div style="margin-top:50%;">
-			<a href="#"> <i class="fa fa-code fa-4x pull-right" ></i> </a>
-				<ul class="side-nav-links" style="margin-top:15px;">
-					<li title="home"  class="opts" ><a href="#/home">Home</a></li>
-					<li title="about"  class="opts"><a href="#/about">About</a></li>
-					<li title="portfolio"  class="opts"><a href="#/portfolio">Portfolio</a></li>
-					<li title="contact"  class="opts"><a href="#/contact">Contact Me </a></li>
-					<li title="Codebits"  class="opts"><a href="#/codebits">Code Bits</a></li>
-				</ul>
+				<a href="#"> <i class="fa fa-code fa-4x pull-right" ></i> </a>
+			</div>
+				<br>
+				<br>
+			<div>
+					<ul class="side-nav-links" style="margin-top:15px;">
+						<li title="home"  class="opts" ><a href="#/home">Home</a></li>
+						<li title="about"  class="opts"><a href="#/about">About</a></li>
+						<li title="portfolio"  class="opts"><a href="#/portfolio">Portfolio</a></li>
+						<li title="contact"  class="opts"><a href="#/contact">Contact Me </a></li>
+						<li title="Codebits"  class="opts"><a href="#/codebits">Code Bits</a></li>
+					</ul>
 			</div>
 		</div>
 		<!-- view -->
-		<div ng-view class="ng-route col-lg-11">
+		<div ng-view class="ng-route right vert-block" >
 		</div>
 	<!-- <script type="text/javascript" src="StylingResources/js/slider.js" ></script> -->
 	<script type="text/javascript" src="StylingResources/js/routing.js"></script> 
