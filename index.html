@@ -152,6 +152,7 @@
 		font-family: 'Raleway', sans-serif;
 		border-right:#B1B1B1 2px solid;
 		background: url('StylingResources/img/nav-background-black.png'); 
+		
 		color:#85E0E0;
 		min-height:100%;
 	}
@@ -212,27 +213,25 @@
 	
   </style>
 	<body ng-app="single-page-app">	
-				<div class="fixed-side-navigation vert-block">
-					<div class="col-md-12 inner-nav" style="margin-top:50%">
-						<a href="#"> <i class="fa fa-code fa-4x pull-right" ></i> </a>
-						<div class="row">
-							<div class="col-md-12">
-								<ul class="side-nav-links">
-									<li title="home"  class="opts" ><a href="#/home">Home</a></li>
-									<li title="about"  class="opts"><a href="#/about">About</a></li>
-									<li title="portfolio"  class="opts"><a href="#/portfolio">Portfolio</a></li>
-									<li title="contact"  class="opts"><a href="#/contact">Contact Me </a></li>
-									<li title="Codebits"  class="opts"><a href="#/codebits">Code Bits</a></li>
-								</ul>
-							</div>
-						</div>
+		<div class="fixed-side-navigation col-lg-1 vert-block">
+			<div class="col-md-12 inner-nav" style="margin-top:50%">
+				<a href="#"> <i class="fa fa-code fa-4x pull-right" ></i> </a>
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="side-nav-links">
+							<li title="home"  class="opts" ><a href="#/home">Home</a></li>
+							<li title="about"  class="opts"><a href="#/about">About</a></li>
+							<li title="portfolio"  class="opts"><a href="#/portfolio">Portfolio</a></li>
+							<li title="contact"  class="opts"><a href="#/contact">Contact Me </a></li>
+							<li title="Codebits"  class="opts"><a href="#/codebits">Code Bits</a></li>
+						</ul>
 					</div>
 				</div>
-				<!-- view -->
-				
-				<div ng-view class="ng-route" >
-				
-				</div>
+			</div>
+		</div>
+		<!-- view -->
+		<div ng-view class="ng-route">
+		</div>
 	<script type="text/javascript" src="StylingResources/js/slider.js" ></script>
 	<script type="text/javascript" src="StylingResources/js/routing.js"></script>
   </body>
