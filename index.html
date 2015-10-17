@@ -212,7 +212,6 @@
 	
   </style>
 	<body ng-app="single-page-app">	
-		<div class="fluid-container">
 			<div class="row">
 				<div class="fixed-side-navigation col-lg-1 vert-block">
 					<div class="col-md-12 inner-nav" style="margin-top:50%">
@@ -231,7 +230,8 @@
 					</div>
 				</div>
 				<!-- view -->
-				<div ng-view class="col-lg-11 white-background ng-route" style="display:block">
+				<div class="fluid-container" style="display:block">
+				<div ng-view class="col-lg-11 white-background ng-route" >
 				
 				</div>
 			</div>
