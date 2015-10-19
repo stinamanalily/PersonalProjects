@@ -165,6 +165,7 @@
 		background: url('StylingResources/img/nav-background-black.png'); 
 		float:left;
 		color:#85E0E0;
+		width:10%;
 		min-height:100%;
 	}
 	.fixed-side-navigation:nth-child(2) {
@@ -225,9 +226,33 @@
 		overflow: auto;
 	}
 	
+	
+	/**** media queries ****/ 
+	
+
+	/* Larger than mobile */
+	@media (min-width: 400px) {}
+
+	/* Larger than phablet (also point when grid becomes active) */
+	@media (min-width: 550px) {}
+
+	/* Larger than tablet */
+	@media (min-width: 750px) {
+		.fixed-side-navigation {
+			width:10%;
+		}
+	}
+
+	/* Larger than desktop */
+	@media (min-width: 1000px) {}
+
+	/* Larger than Desktop HD */
+	@media (min-width: 1200px) {
+	}
+
   </style>
 	<body ng-app="single-page-app">	
-		<div class="fixed-side-navigation col-lg-1 vert-block">
+		<div class="fixed-side-navigation vert-block">
 			<div class="col-md-12" style="margin-top:50%; height:50px;">
 				<a href="#"> <i class="fa fa-code fa-4x pull-right" ></i> </a>				
 			</div>
