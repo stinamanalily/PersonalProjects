@@ -40,16 +40,6 @@
 	.top-offset-60 {
 		margin-top:60px;
 	}
-	.fixed-side-navigation {
-		display:block;
-		z-index:10;
-		
-		margin-top:15%;
-		top:0;
-		left:10px;
-		padding:10px;
-		min-height:100%;
-	}
 	.hidden-slide {
 		overflow:hidden;
 		display:none;
@@ -153,22 +143,18 @@
 	
 	/* navigation on the side */
 	.fixed-side-navigation {
-		display:block;
+		width: 200px;
 		overflow:hidden;
-		margin-top:0;
-		margin-bottom-0;
 		top: 0;
 		bottom: 0;
-		left:0;
+		left: -200;
 		font-family: 'Raleway', sans-serif;
 		border-right:#B1B1B1 2px solid;
 		background: url('StylingResources/img/nav-background-black.png'); 
 		float:left;
 		color:#85E0E0;
-		width:10%;
 		min-height:100%;
-	}
-	.fixed-side-navigation:nth-child(2) {
+		display:none;
 	}	
 	.fixed-side-navigation  li {
 		 border-bottom: 2px solid #707070;
@@ -226,6 +212,10 @@
 		overflow: auto;
 	}
 	
+	.menu-icon {
+		z-index:100;
+		display:block;
+	}
 	
 	/**** media queries ****/ 
 	
@@ -239,7 +229,11 @@
 	/* Larger than tablet */
 	@media (min-width: 750px) {
 		.fixed-side-navigation {
-			width:10%;
+			display:block;
+			left:0;
+		}
+		.menu-icon {
+			display:none;
 		}
 	}
 
@@ -267,6 +261,7 @@
 			</div>
 		</div>
 		<!-- view -->
+		
 		<div ng-view class="ng-route right white-background vert-block" >
 		</div>
 	<!-- <script type="text/javascript" src="StylingResources/js/slider.js" ></script> -->
