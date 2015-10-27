@@ -202,7 +202,16 @@
 	
 	.menu-icon {
 		z-index:100;
-		color:#000;
+		width:40px;
+		height:40px;
+		border-radius:4px;
+		color:#f0f0f0;
+		padding:5px;
+		font-weight: normal;
+		  line-height: 1.42857143;
+		  text-align: center;
+		  white-space: nowrap;
+		  vertical-align: middle;
 	}
 	.menu-icon:hover {
 		color:white;
@@ -234,9 +243,11 @@
         <!-- Page Content -->
         <div id="page-content-wrapper ">
 			<div class="stack-priority" style="background-color:white;">
-				<a href="#menu-toggle" class=" btn btn-default stack-priority" id="menu-toggle" >
-					<i class="fa fa-bars fa-2x"></i>
-				</a>
+				<div class="menu-icon">
+					<a href="#menu-toggle" class="stack-priority" id="menu-toggle" >
+						<i class="fa fa-bars fa-2x"></i>
+					</a>
+				</div>
 			</div>
 			<div ng-view class="ng-route">
 			</div>
