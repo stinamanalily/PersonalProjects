@@ -213,7 +213,7 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div id="page-content-wrapper" class="white-background right">
+        <div id="page-content-wrapper" class="">
 			<div class="stack-priority" style="background-color:white;">
 				<div class="menu-icon">
 					<a href="#menu-toggle" class="stack-priority" id="menu-toggle" >
@@ -221,8 +221,15 @@
 					</a>
 				</div>
 			</div>
-			<div ng-view class="ng-route">
+			<div class="container-fluid  white-background ">
+				<div class="row">
+					<div class="col-md-12">
+						<div ng-view class="ng-route right">
+						</div>
+					</div>
+				</div>
 			</div>
+			
         </div>
         <!-- /#page-content-wrapper -->
 
