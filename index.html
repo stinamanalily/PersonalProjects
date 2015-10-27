@@ -134,36 +134,8 @@
 	
 	/* navigation on the side */
 	.fixed-side-navigation {
-		width: 285px;
-		overflow:hidden;
-		top: 0;
-		bottom: 0;
-		left: -285;
-		font-family: 'Raleway', sans-serif;
-		border-right:#B1B1B1 2px solid;
 		background: url('StylingResources/img/nav-background-black.png'); 
-		color:#85E0E0;
-		min-height:100%;
-		position:fixed;
 	}	
-	.fixed-side-navigation  li {
-		 border-bottom: 2px solid #707070;
-	}
-	.fixed-side-navigation  li a{
-		 		color:#85E0E0;
-	}
-	.fixed-side-navigation  a{
-		 		color:#85E0E0;
-	}
-	.fixed-side-navigation  li a:hover {
-		color:#0FA0CE;
-	}
-	.fixed-side-navigation  li:hover {
-		 border-bottom: 2px solid #0FA0CE;
-	}
-	.fixed-side-navigation  li a{
-		text-decoration:none;
-	}
 	
 	.stack-priority { 
 		z-index:10;
@@ -222,9 +194,9 @@
  
   <body  ng-app="single-page-app">
 
-    <div id="wrapper" class="vert-block white-background">
+    <div id="wrapper">
 
-        <div id="sidebar-wrapper">
+        <div id="sidebar-wrapper" class="fixed-side-navigation">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
@@ -241,7 +213,7 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div id="page-content-wrapper ">
+        <div id="page-content-wrapper " class="vert-block white-background">
 			<div class="stack-priority" style="background-color:white;">
 				<div class="menu-icon">
 					<a href="#menu-toggle" class="stack-priority" id="menu-toggle" >
