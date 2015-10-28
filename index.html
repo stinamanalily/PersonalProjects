@@ -23,7 +23,6 @@
 	  font-weight: 400; 
 	  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	  color: #222; 
-	  height: 100%;
 	  background: url('StylingResources/img/gray_white_cherry_blossom_yay_nature_flowers_hd-wallpaper-1131718.jpg')no-repeat center center fixed; 
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
@@ -114,7 +113,7 @@
 	
 	}
 	.white-background {
-		height:100%;
+		height:100vh;
 		background: -moz-linear-gradient(left,  rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 100%)   ; 
 		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.7)), color-stop(100%,rgba(255,255,255,0.5)))   ;
 		background: -webkit-linear-gradient(left,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%)   ; 
@@ -122,7 +121,7 @@
 		background: -ms-linear-gradient(left,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%); 
 		background: linear-gradient(to right,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%)   ; 
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40ffffff', endColorstr='#40ffffff',GradientType=1 ); /* IE6-9 */
-		background-attachment: fixed !important;
+		background-repeat: repeat;
 		
 	}
 	.black-background{
@@ -140,6 +139,7 @@
 	/* navigation on the side */
 	.fixed-side-navigation {
 		background: url('StylingResources/img/nav-background-black.png'); 
+		position:fixed;
 	}	
 	
 	.stack-priority { 
@@ -219,7 +219,7 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-			<div class="stack-priority" style="background-color:white;">
+			<div class="white-background"> 
 				<div class="menu-icon">
 					<a href="#menu-toggle" class="stack-priority" id="menu-toggle" >
 						<i class="fa fa-bars fa-2x"></i>
