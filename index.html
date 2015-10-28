@@ -28,6 +28,10 @@
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
+	   min-width:100%; 
+	   min-height:100%; 
+	   width:auto; 
+	   height:auto; 
 	}
 	.gh-block {
 		height:100vh;	
@@ -132,7 +136,7 @@
 		background: -ms-linear-gradient(left,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%); 
 		background: linear-gradient(to right,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%); 
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#80000000',GradientType=1 ); /* IE6-9 */
-				background-attachment: fixed !important;
+		background-attachment: fixed !important;
 
 	}
 	
@@ -219,7 +223,7 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-			<div class="white-background"> 
+			<div style="background:#fff;"> 
 				<div class="menu-icon">
 					<a href="#menu-toggle" class="stack-priority" id="menu-toggle" >
 						<i class="fa fa-bars fa-2x"></i>
@@ -228,7 +232,6 @@
 			</div>
 			<div ng-view class="ng-route white-background">
 			</div>
-			
         </div>
         <!-- /#page-content-wrapper -->
 
