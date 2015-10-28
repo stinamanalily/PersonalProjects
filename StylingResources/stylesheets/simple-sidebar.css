@@ -116,7 +116,6 @@
     }
 
     #wrapper.toggled #page-content-wrapper {
-        position: relative;
         margin-right: 0;
     }
 }
