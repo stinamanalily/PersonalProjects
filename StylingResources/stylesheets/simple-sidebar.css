@@ -39,7 +39,6 @@
 #page-content-wrapper {
     position: absolute;
 	overflow-y: auto;
-	width:100%;
 }
 
 #wrapper.toggled #page-content-wrapper {
