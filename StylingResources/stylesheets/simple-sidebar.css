@@ -37,8 +37,10 @@
 }
 
 #page-content-wrapper {
-    position: absolute;
+    position: fixed;
 	overflow-y: auto;
+    min-width:100%;
+    
 }
 
 #wrapper.toggled #page-content-wrapper {
