@@ -112,7 +112,8 @@
     }
 
     #page-content-wrapper {
-        position: absolute;
+        position: fixed;
+        min-width:100%;
     }
 
     #wrapper.toggled #page-content-wrapper {
