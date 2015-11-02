@@ -224,14 +224,18 @@
         <!-- Page Content -->
         <div id="page-content-wrapper" class="white-background">
 			<div class="container-fluid">
-				<div class="row" style="background:#fff;"> 
-					<div class="menu-icon" >
-						<a href="#menu-toggle" class="stack-priority" id="menu-toggle" >
-							<i class="fa fa-bars fa-2x"></i>
-						</a>
+				<div class="row">
+					<div class="col-md-12">
+						<div style="background:#fff;"> 
+							<div class="menu-icon" >
+								<a href="#menu-toggle" class="stack-priority" id="menu-toggle" >
+									<i class="fa fa-bars fa-2x"></i>
+								</a>
+							</div>
+						</div>
+						<div ng-view class="ng-route row">
+						</div>
 					</div>
-				</div>
-				<div ng-view class="ng-route row">
 				</div>
 			</div>
         </div>
