@@ -37,7 +37,7 @@
 }
 
 #page-content-wrapper {
-    position: fixed;
+    position: absolute;
 	overflow-y: auto;
     min-width:100%;
     
