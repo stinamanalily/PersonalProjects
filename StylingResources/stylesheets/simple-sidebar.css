@@ -39,6 +39,8 @@
 #page-content-wrapper {
     position: absolute;
 	overflow-y: auto;
+    min-width:100%;
+    
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -112,10 +114,12 @@
     }
 
     #page-content-wrapper {
-        position: absolute;
+    	position:relative;
+        min-width:100%;
     }
 
     #wrapper.toggled #page-content-wrapper {
+    	position:absolute;
         margin-right: 0;
     }
 }
