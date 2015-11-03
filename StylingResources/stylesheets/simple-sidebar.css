@@ -7,7 +7,8 @@
 /* Toggle Styles */
 
 #wrapper {
-    padding-left: 0;
+	background-attachment:cover;
+    padding-left: 0px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -40,7 +41,8 @@
     position: relative;
 	overflow-y: auto;
     min-width:100%;
-    float:left
+    float:left;
+	min-height:100%;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -117,6 +119,7 @@
     	position:relative;
         min-width:100%;
 		float:left;
+		min-height:1050px;
     }
 
     #wrapper.toggled #page-content-wrapper {
