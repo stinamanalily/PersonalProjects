@@ -20,9 +20,21 @@
 			<p>No of Guesses: <span>{{noOfTries}}</span></p>
 		</div>
 		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-		 <script src ="controller.js"></script>
 		 <script>
 			angular.module('GuessingApp', []).controller('GuessNumberController', GuessNumberController);
+			function GuessNumberController($scope) {
+				$scope.verifyGuess = function() {
+					$scope.deviation = $scope.original - $scope.guess;
+					$scope.noOfTries = $scope.noOfTries + 1;
+				}
+				$scope.initializeGame = function () {
+					$scope.noOfTries = 0;
+					$scope.original = Math.floor((Math.random() * 1000) + 1);
+					$scope.guess = null;
+					$scope.deviation = null;
+				}
+				$scope.initializeGame();
+			}
 		 </script>
 	</body>
 </html>
