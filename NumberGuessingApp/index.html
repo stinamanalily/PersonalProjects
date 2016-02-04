@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	</head>
+	<body ng-app="GuessingApp">
+		<div class="container" ng-controller="GuessNumberController">
+			<h2>Guess the Number</h2>
+			<div>
+				<p>Pick a number between 1 and 1000...</p>
+				<label>Your Guess: <input type="number" ng-model="guess" /> </label>
+				<button ng-click="verifyGuess()" class="btn btn-primary">Verify</button>
+				<button ng-click="initializeGame()" class="btn btn-warning">Restart Game</button>
+			</div>
+			<div>
+				<p ng-show="deviation < 0">Your guess is higher...</p>
+				<p ng-show="deviation > 0">Your guess is lower... </p>
+				<p ng-show="deviation === 0">Good Job!! </p>
+			</div>
+			<p>No of Guesses: <span>{{noOfTries}}</span></p>
+		</div>
+		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		 <script>
+			angular.module('GuessingApp', []).controller('GuessNumberController', GuessNumberController);
+		 </script>
+	</body>
+</html>
