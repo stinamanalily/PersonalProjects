@@ -4,7 +4,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		
 	</head>
-	<body ng-app="GuessingApp">
+	<body ng-app="mainApp">
 		<div class="container" ng-controller="GuessNumberController">
 			<h2>Guess the Number</h2>
 			<div>
@@ -22,7 +22,7 @@
 		</div>
 		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 		 <script>
-			angular.module('GuessingApp', []).controller('GuessNumberController', GuessNumberController);
+			var mainApp = angular.module('GuessingApp', []).controller('GuessNumberController', GuessNumberController);
 			function GuessNumberController($scope) {	
 				$scope.verifyGuess = function() {
 					$scope.deviation = $scope.original - $scope.guess;
