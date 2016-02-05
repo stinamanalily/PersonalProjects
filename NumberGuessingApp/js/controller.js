@@ -1,6 +1,6 @@
-function GuessNumberController($scope) {
+angular.module('GuessingApp', []).controller('GuessNumberController', GuessNumberController);
 
-	
+function GuessNumberController($scope) {	
 	$scope.verifyGuess = function() {
 		$scope.deviation = $scope.original - $scope.guess;
 		$scope.noOfTries = $scope.noOfTries + 1;

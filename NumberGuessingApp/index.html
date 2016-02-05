@@ -2,9 +2,10 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		
 	</head>
 	<body ng-app="GuessingApp">
-		<div class="container" ng-controller="GuessNumberController">
+	<div class="container" ng-controller="GuessNumberController">
 			<h2>Guess the Number</h2>
 			<div>
 				<p>Pick a number between 1 and 1000...</p>
@@ -21,7 +22,22 @@
 		</div>
 		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 		 <script>
+			// moved controller to the index page
 			angular.module('GuessingApp', []).controller('GuessNumberController', GuessNumberController);
-		 </script>
+			function GuessNumberController($scope) {	
+				$scope.verifyGuess = function() {
+					$scope.deviation = $scope.original - $scope.guess;
+					$scope.noOfTries = $scope.noOfTries + 1;
+				}
+				$scope.initializeGame = function () {
+					$scope.noOfTries = 0;
+					$scope.original = Math.floor((Math.random() * 1000) + 1);
+					$scope.guess = null;
+					$scope.deviation = null;
+				}
+				$scope.initializeGame();
+			}
+		 </script> 
+		
 	</body>
 </html>
