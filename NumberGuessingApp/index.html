@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+
+<!-- 
+* 	An example taken from the book "AngularJS by Example", by Chandermani. 
+*   A number randomizer picks a number from 1 to 1000 and compares it with 
+*	number that you have chosen. 
+*
+*	MY EDITS ===========================================================!! 
+*		I added the validateGuess() function in the angular controller to 
+*	make sure the user picks a number that is from no less than 1 and 
+* 	no more than 100.
+*		I also made it so that the randomizer only picks a number from 1 to
+*	100 since it is not necessary to go all the way up to 1000.		
+-->
 <html>
 	<head>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -8,8 +21,9 @@
 	<div class="container" ng-controller="GuessNumberController">
 			<h2>Guess the Number</h2>
 			<div>
-				<p>Pick a number between 1 and 1000...</p>
+				<p>Pick a number between 1 and 100...</p>
 				<label>Your Guess: <input type="number" ng-model="guess" /> </label>
+				<div class="warning" ng-show="invalidEntry">Invalid entry! Please enter a number from 1 to 100.</div>
 				<button ng-click="verifyGuess()" class="btn btn-primary">Verify</button>
 				<button ng-click="initializeGame()" class="btn btn-warning">Restart Game</button>
 			</div>
@@ -25,15 +39,43 @@
 			// moved controller to the index page
 			angular.module('GuessingApp', []).controller('GuessNumberController', GuessNumberController);
 			function GuessNumberController($scope) {	
+			
+				/* 
+					MY EDIT:
+					Created a new function that checks whether or not
+					the user has picked a number from 1 to 100.
+					
+					If the user has chosen a number less than 1 or 
+					greater than 100, it flags the user's entry as 
+					invalid. 
+				*/
+				$scope.validateGuess = function() {
+					if ($scope.guess < 1 || $scope.guess > 100) 
+					{
+						$scope.invalidEntry = true;
+					}
+				}
+				/* 
+					EDIT: 
+					Added validateGuess() function to validate the user's entry
+					
+					Added an if statement that checks if the entry is invalid.
+					If invalidEntry = true, it will not compare the user's guess
+					and the original number. 
+				*/
 				$scope.verifyGuess = function() {
-					$scope.deviation = $scope.original - $scope.guess;
-					$scope.noOfTries = $scope.noOfTries + 1;
+					$scope.validateGuess();
+					if ($scope.invalidEntry === false) {
+						$scope.deviation = $scope.original - $scope.guess;
+						$scope.noOfTries = $scope.noOfTries + 1; 
+					}
 				}
 				$scope.initializeGame = function () {
 					$scope.noOfTries = 0;
-					$scope.original = Math.floor((Math.random() * 1000) + 1);
+					$scope.original = Math.floor((Math.random() * 100) + 1);
 					$scope.guess = null;
 					$scope.deviation = null;
+					$scope.invalidEntry = false;
 				}
 				$scope.initializeGame();
 			}
