@@ -11,6 +11,7 @@
 * 	no more than 100.
 *		I also made it so that the randomizer only picks a number from 1 to
 *	100 since it is not necessary to go all the way up to 1000.		
+*		Messed around with bootstrap CSS
 -->
 <html>
 	<head>
@@ -19,13 +20,19 @@
 	</head>
 	<body ng-app="GuessingApp">
 	<div class="container" ng-controller="GuessNumberController">
-			<h2>Guess the Number</h2>
-			<div class="col-md-6 col-md-offset-2">
-				<div>
+			<div class="col-md-6 col-md-offset-2 text-center">
+				<h2>Guess the Number</h2>
+				<div class="text-center">
 					<p>Pick a number between 1 and 100...</p>
-					<label>Your Guess: <input type="number" ng-model="guess" /> </label>
-					<button ng-click="verifyGuess()" class="btn btn-primary">Verify</button>
-					<button ng-click="initializeGame()" class="btn btn-warning">Restart Game</button>
+					<br>
+					<div class="form-group">
+						<label>Your Guess: </label>
+						<input type="number" ng-model="guess" />
+					</div>
+					<div class="form-group">
+						<button ng-click="verifyGuess()" class="btn btn-primary">Verify</button>
+						<button ng-click="initializeGame()" class="btn btn-warning">Restart Game</button>
+					</div>
 					<div class="alert alert-warning" ng-show="invalidEntry">Invalid entry! Please enter a number from 1 to 100.</div>
 
 				</div>
