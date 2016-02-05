@@ -20,19 +20,22 @@
 	<body ng-app="GuessingApp">
 	<div class="container" ng-controller="GuessNumberController">
 			<h2>Guess the Number</h2>
-			<div>
-				<p>Pick a number between 1 and 100...</p>
-				<label>Your Guess: <input type="number" ng-model="guess" /> </label>
-				<div class="warning" ng-show="invalidEntry">Invalid entry! Please enter a number from 1 to 100.</div>
-				<button ng-click="verifyGuess()" class="btn btn-primary">Verify</button>
-				<button ng-click="initializeGame()" class="btn btn-warning">Restart Game</button>
+			<div class="col-md-6 col-md-offset-2">
+				<div>
+					<p>Pick a number between 1 and 100...</p>
+					<label>Your Guess: <input type="number" ng-model="guess" /> </label>
+					<button ng-click="verifyGuess()" class="btn btn-primary">Verify</button>
+					<button ng-click="initializeGame()" class="btn btn-warning">Restart Game</button>
+					<div class="alert alert-warning" ng-show="invalidEntry">Invalid entry! Please enter a number from 1 to 100.</div>
+
+				</div>
+				<div>
+					<p ng-show="deviation < 0 && invalidEntry === false">Your guess is higher...</p>
+					<p ng-show="deviation > 0 && invalidEntry === false">Your guess is lower... </p>
+					<p ng-show="deviation === 0">Good Job!! </p>
+				</div>
+				<p>No of Guesses: <span>{{noOfTries}}</span></p>
 			</div>
-			<div>
-				<p ng-show="deviation < 0">Your guess is higher...</p>
-				<p ng-show="deviation > 0">Your guess is lower... </p>
-				<p ng-show="deviation === 0">Good Job!! </p>
-			</div>
-			<p>No of Guesses: <span>{{noOfTries}}</span></p>
 		</div>
 		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 		 <script>
