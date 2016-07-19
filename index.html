@@ -7,10 +7,11 @@
 		
 		<!-- STYLES -->
 		<link rel="stylesheet" type="text/css" href="StylingResources/stylesheets/stylesheet.css"> 
+		<link rel="stylesheet" type="text/css" href="StylingResources/stylesheets/onepagestyle.css"> 
 		<link rel="stylesheet" href="StylingResources/font-awesome-4.4.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="StylingResources/stylesheets/simple-sidebar.css">
 		<!-- FONTS -->
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> 
 		
@@ -18,190 +19,7 @@
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script>
 	</head>
-  <style>
   
-	html, body {
-	  min-height:100%;
-	  font-weight: 400; 
-	  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	  color: #222;  
-	  	  background: url('StylingResources/img/gray_white_cherry_blossom_yay_nature_flowers_hd-wallpaper-1131718.jpg'); 
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-	}
-	.gh-block {
-		height:100vh;	
-	}
-	.top-offset-60 {
-		margin-top:60px;
-	}
-	.hidden-slide {
-		overflow:hidden;
-		display:none;
-	}
-	.active-slide {
-		display: block;
-		overflow:hidden;
-	}
-	.contents {
-		padding:50px;
-		color:#ffffff;
-	}
-	nav#menu {
-		margin-bottom: 11px;
-	}
-	button {
-		color: rgba(255, 255, 255, 0.7);
-		background-color: rgba(0, 0, 0, 0.5);
-		border-color: rgba(225, 225, 225, 0.5);
-		border-width: 1px;
-		border: 1px solid white;
-		display: inline-block;
-		padding: 6px 12px;
-		margin-bottom: 0;
-		font-size: 14px;
-		font-weight: normal;
-		  line-height: 1.42857143;
-		  text-align: center;
-		  white-space: nowrap;
-		  vertical-align: middle;
-		  -ms-touch-action: manipulation;
-			  touch-action: manipulation;
-		  cursor: pointer;
-		  -webkit-user-select: none;
-			 -moz-user-select: none;
-			  -ms-user-select: none;
-				  user-select: none;
-		  background-image: none;
-		  border-radius: 4px;
-	}
-	
-	/* tabs button menu style */
-	
-	nav#menu {
-		padding:20;
-	}
-	nav#menu  button {
-		color: rgba(255, 255, 255, 0.8);
-		background-color: rgba(0, 0, 0, 0.5);
-		border-color: rgba(225, 225, 225, 0.5);
-		border-style: solid;
-		border-width: 1px;
-	}
-	nav#menu button:hover {
-		color: rgba(255, 255, 255, 0.8);
-		  text-decoration: none;
-		  background-color: rgba(255, 255, 255, 0.2);
-		  border-color: rgba(255, 255, 255, 0.3); 
-	}
-	/* translucent sidebar menu */
-	
-	.vert-block {
-		min-height:100%;
-		height:100%;
-	}
-	
-	/* translucent background and gradients */
-	.white-vert-gradient {
-		background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); 
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); 
-		background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-		background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-		background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); 
-		background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); 
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-	
-	}
-	.white-background {
-		min-height:100%;
-		background: -moz-linear-gradient(left,  rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 100%)   ; 
-		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.7)), color-stop(100%,rgba(255,255,255,0.5)))   ;
-		background: -webkit-linear-gradient(left,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%)   ; 
-		background: -o-linear-gradient(left,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%)   ; 
-		background: -ms-linear-gradient(left,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%); 
-		background: linear-gradient(to right,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%)   ; 
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40ffffff', endColorstr='#40ffffff',GradientType=1 ); /* IE6-9 */
-		background-repeat: repeat;
-		
-	}
-	.black-background{
-		background: -moz-linear-gradient(left,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%); 
-		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,0.5))); 
-		background: -webkit-linear-gradient(left,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%); 
-		background: -o-linear-gradient(left,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%); 
-		background: -ms-linear-gradient(left,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%); 
-		background: linear-gradient(to right,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%); 
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#80000000',GradientType=1 ); /* IE6-9 */
-		background-attachment: fixed !important;
-
-	}
-	
-	/* navigation on the side */
-	.fixed-side-navigation {
-		background: url('StylingResources/img/nav-background-black.png'); 
-		position:fixed;
-	}	
-	
-	.stack-priority { 
-		z-index:10;
-	}
-	.side-nav-links {
-		margin-top:50%;
-	}
-	ul.side-nav-links {
-		list-style-type: none;
-	}
-	ul.side-nav-links li{
-		list-style-type: none;
-		text-align:right;
-		margin-top:15px;
-	}
-	
-	a { 
-		color: #009999; <!-- 85E6C5 --> 
-		text-decoration: none; 
-	}  
-	a:hover {
-		color: #0FA0CE; 
-	}
-	input[type="text"]{
-		opacity: 0.7;
-		border: none;
-		background: #000;
-	}
-	textarea  { 
-		background-color:#000;
-		opacity: 0.7;
-	}
-	.right {
-		overflow: auto;
-	}
-	
-	.menu-icon {
-		z-index:100;
-		width:40px;
-		height:40px;
-		border-radius:4px;
-		color:#f0f0f0;
-		padding:5px;
-		font-weight: normal;
-		  line-height: 1.42857143;
-		  text-align: center;
-		  white-space: nowrap;
-		  vertical-align: middle;
-	}
-	.menu-icon:hover {
-		color:white;
-	}
-	
-	
-  </style>
- 
   <body  ng-app="single-page-app">
 
     <div id="wrapper" class="white-background">
@@ -214,10 +32,8 @@
                     </a>
                 </li>
                 <li title="home"  class="opts" ><a href="#/home">Home</a></li>
-				<li title="about"  class="opts"><a href="#/about">About</a></li>
-				<li title="portfolio"  class="opts"><a href="#/portfolio">Portfolio</a></li>
-				<li title="contact"  class="opts"><a href="#/contact">Contact Me </a></li>
-				<li title="Codebits"  class="opts"><a href="#/codebits">Code Bits</a></li>
+			<li title="about"  class="opts"><a href="#/about">About</a></li>
+			<li title="contact"  class="opts"><a href="#/contact">Contact Me </a></li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
