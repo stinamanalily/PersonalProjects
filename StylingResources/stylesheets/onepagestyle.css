@@ -3,14 +3,15 @@ html, body {
 	  font-weight: 400; 
 	  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	  color: #222;  
-	  	  background: url('http://stinamanalily.github.io/PersonalProjects/StylingResources/img/gray_white_cherry_blossom_yay_nature_flowers_hd-wallpaper-1131718.jpg'); 
+	  background: url('http://stinamanalily.github.io/PersonalProjects/StylingResources/img/gray_white_cherry_blossom_yay_nature_flowers_hd-wallpaper-1131718.jpg'); 
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
+	  background-position: center center;
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  overflow-x: hidden;
 	}
 	.gh-block {
 		height:100vh;	
