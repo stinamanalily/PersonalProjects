@@ -121,6 +121,7 @@
         min-width:100%;
 		float:left;
 		min-height:1050px;
+	        height: 100vh;
     }
 
     #wrapper.toggled #page-content-wrapper {
